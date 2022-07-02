@@ -1,15 +1,15 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+
+#bio: My research interests include distributed robotics, mobile computing and programmable matter.
 education:
   courses:
   - course: PhD in Neuroscience
     institution: Mayo Clinic
-   # year: 2019 ~ present
+    year: 2019-Current
   - course: MBBS in Medicine
     institution: Shandong University
-   # year: 2014 ~ 2019
-#  - course: BSc in Artificial Intelligence
+    year: 2014-2019
+# - course: BSc in Artificial Intelligence
 #    institution: Massachusetts Institute of Technology
 #    year: 2008
 email: ""
@@ -26,7 +26,7 @@ role: PhD Candidate in Neuroscience
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:wang.lingxiao357@yahoo.com
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/LingShyowWawng
