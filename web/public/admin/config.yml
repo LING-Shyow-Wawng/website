@@ -199,7 +199,7 @@ collections:
         widget: string
       - label: Year
         name: year
-        required: true
+        required: false
         value_type: int
         widget: number
       label: Courses
