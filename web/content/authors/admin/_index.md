@@ -3,26 +3,26 @@ bio: My research interests include distributed robotics, mobile computing and pr
   matter.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
+  - course: PhD in Neuroscience
     institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+    year: 2019 ~ present
+  - course: MBBS in Medicine
+    institution: Shandong University
+    year: 2014 ~ 2019
+#  - course: BSc in Artificial Intelligence
+#    institution: Massachusetts Institute of Technology
+#    year: 2008
 email: ""
 highlight_name: true
 interests:
-- Cerebrovascular disease
-- Interventional neurology
+- Cerebrovascular Disease
+- Interventional Neurology
 - Neuroinflammation
 - Computational Data Analytics
 organizations:
 - name: Mayo Clinic
   url: https://www.mayoclinic.org/
-role: PhD Candidate in Neuroscience Track
+role: PhD Candidate in Neuroscience
 social:
 - icon: envelope
   icon_pack: fas
