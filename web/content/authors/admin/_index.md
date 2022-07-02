@@ -43,7 +43,7 @@ superuser: true
 title: Lingxiao Wang, MBBS
 ---
 
-**Lingxiao** /LING-Shy-ow/ **Wang** /Wawng/ is a 4th-year Neuroscience🧠 PhD candidate in [Dr. Long-Jun Wu’s lab](https://neuroimmunelab.mayo.edu/lab-news/) @ [Mayo Clinic](https://college.mayo.edu/academics/biomedical-research-training/). 
+**Lingxiao** /LING-Shy-ow/ **Wang** /Wawng/ is a 4th-year Neuroscience🧠 PhD candidate in the [Neuroimmune Interaction in Health and Disease](https://neuroimmunelab.mayo.edu/members/) lab led by [Dr. Long-Jun Wu](https://twitter.com/longjun_wu) at Mayo Clinic. 
 
 The biomedical research interests of Lingxiao includes human cerebrovascular diseases (*e.g.* stroke), neuroinflammation and brain myeloid cells (microglia & CNS-macrophages). His PhD thesis is to study how the complement component 3 (C3) contributes to ischemic stroke pathology. Inspired by RNA sequencing analysis, he is also interested in data science and its application in biomedical research. He collaborates with multiple labs as a junior bioinformatician to study a broad spectrum of human diseases such as glioblastoma, epilepsy and interstitial lung disease.
 
