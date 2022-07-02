@@ -15,29 +15,30 @@ education:
 email: ""
 highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Cerebrovascular disease
+- Interventional neurology
+- Neuroinflammation
+- Computational Data Analytics
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Mayo Clinic
+  url: https://www.mayoclinic.org/
+role: PhD Candidate in Neuroscience Track
 social:
 - icon: envelope
   icon_pack: fas
   link: /#contact
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/LingShyowWawng
+[- icon: graduation-cap]
+[  icon_pack: fas]
+[  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ]
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/LING-Shyow-Wawng
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: http://www.linkedin.com/in/lingxiao-wang-36167a241
 superuser: true
 title: Lingxiao Wang, MBBS
 ---
