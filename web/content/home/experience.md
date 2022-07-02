@@ -25,7 +25,7 @@ experience:
   - title: PhD candidate
     company: Mayo Clinic
     company_url: 'https://www.mayoclinic.org/'
-    company_logo: MCGSBS
+    company_logo: MCGSBS  #folder at /themes/hugo/assets/media/icon/brands
     location: California
     date_start: '2021-01-01'
     date_end: ''
