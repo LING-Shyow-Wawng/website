@@ -5,10 +5,10 @@ education:
   courses:
   - course: PhD in Neuroscience
     institution: Mayo Clinic
-    year: 2019-Current
+    year: 2019 - Current
   - course: MBBS in Medicine
     institution: Shandong University
-    year: 2014-2019
+    year: 2014 - 2019
 # - course: BSc in Artificial Intelligence
 #    institution: Massachusetts Institute of Technology
 #    year: 2008
@@ -26,7 +26,7 @@ role: PhD Candidate in Neuroscience
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:wang.lingxiao357@yahoo.com
+  link: mailto:wang.lingxiao@mayo.edu
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/LingShyowWawng
@@ -43,8 +43,8 @@ superuser: true
 title: Lingxiao Wang, MBBS
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+**Lingxiao** /LING-Shy-ow/ **Wang** /Wawng/ is a 4th-year Neuroscience🧠 PhD candidate in [Dr. Long-Jun Wu’s lab](https://neuroimmunelab.mayo.edu/lab-news/) @ [Mayo Clinic](https://college.mayo.edu/academics/biomedical-research-training/). 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+The biomedical research interests if Lingxiao includes human cerebrovascular diseases (e.g. stroke), neuroinflammation and brain myeloid cells. His PhD thesis is to study how the complement component 3 (C3) contributes to ischemic stroke pathology. Inspired by RNA sequencing analysis, he is also interested in data science and its application in biomedical research. He collaborates with multiple labs as a bioinformatician to study a broad spectrum of human diseases such as glioblastoma, epilepsy and interstitial lung disease.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
