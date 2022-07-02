@@ -23,10 +23,11 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
   - title: PhD candidate in Neuroscience🧠
+    title_url: 'https://www.mayoclinic.org/'
     company: Mayo Clinic
-    company_url: 'https://www.mayoclinic.org/'
+    company_url: ''
     company_logo: MCGSBS  #folder at /themes/hugo/assets/media/icon/brands
-    location: California
+    location: Minnesota
     date_start: '2019-07-01' #must be in this format
     date_end: ''
   # description: |2-
