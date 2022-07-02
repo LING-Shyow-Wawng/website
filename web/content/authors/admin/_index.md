@@ -4,7 +4,7 @@ bio: My research interests include distributed robotics, mobile computing and pr
 education:
   courses:
   - course: PhD in Neuroscience
-    institution: Stanford University
+    institution: Mayo Clinic
     year: 2019 ~ present
   - course: MBBS in Medicine
     institution: Shandong University
