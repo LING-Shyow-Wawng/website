@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Experience
+title: Education & Experience
 subtitle:
 
 # Date format for experience
@@ -23,7 +23,6 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
   - title: PhD candidate in Neuroscience🧠
-    title_url: 'https://www.mayoclinic.org/'
     company: Mayo Clinic
     company_url: ''
     company_logo: MCGSBS  #folder at /themes/hugo/assets/media/icon/brands
