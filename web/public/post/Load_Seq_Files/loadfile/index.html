@@ -64,10 +64,10 @@
   
     
   
-  <meta name="description" content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." />
+  <meta name="description" content="Importing Bulk RNAseq files The most common file types that we will see for bulk RNAseq are count matrix files ending in .txt or .csv or .tsv or .xls. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://example.com/categories/" />
+  <link rel="alternate" hreflang="en-us" href="https://example.com/post/load_seq_files/loadfile/" />
 
   
   
@@ -274,8 +274,6 @@
   
 
   
-    <link rel="alternate" href="/categories/index.xml" type="application/rss+xml" title="Academic" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -284,7 +282,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://example.com/categories/" />
+  <link rel="canonical" href="https://example.com/post/load_seq_files/loadfile/" />
 
   
   
@@ -310,33 +308,82 @@
     <meta property="twitter:creator" content="@wowchemy" />
   
   <meta property="og:site_name" content="Academic" />
-  <meta property="og:url" content="https://example.com/categories/" />
-  <meta property="og:title" content="Categories | Academic" />
-  <meta property="og:description" content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://example.com/post/load_seq_files/loadfile/" />
+  <meta property="og:title" content="Loding different sequencing data into R | Academic" />
+  <meta property="og:description" content="Importing Bulk RNAseq files The most common file types that we will see for bulk RNAseq are count matrix files ending in .txt or .csv or .tsv or .xls. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-07-07T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-07-07T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-07-07T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/post/load_seq_files/loadfile/"
+  },
+  "headline": "Loding different sequencing data into R",
+  
+  "datePublished": "2022-07-07T00:00:00Z",
+  "dateModified": "2022-07-07T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Lingxiao Wang, MBBS"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Importing Bulk RNAseq files The most common file types that we will see for bulk RNAseq are count matrix files ending in .txt or .csv or .tsv or .xls. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample."
+}
+</script>
+
+  
+
+  
+
   
 
   
 
 
 
-  
-
-  
 
 
-
-
-
-  <title>Categories | Academic</title>
+  <title>Loding different sequencing data into R | Academic</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="21ab07ee62299a83f268bcc4972fad3d" >
 
   
   
@@ -716,7 +763,9 @@
     
     
 
-    
+    <article class="article">
+
+  
 
 
 
@@ -734,53 +783,13 @@
   
   
   
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Categories</h1>
+<div class="article-container pt-3">
+  <h1>Loding different sequencing data into R</h1>
 
   
 
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
   
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/category/r/" >R</a>
-    </div>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -801,182 +810,329 @@
   
 
   
-
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/category/demo/" >Demo</a>
-    </div>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Dec 13, 2020
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
   </span>
   
 
   
-
-  
-
-  
   
   
   
 
   
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
   
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
+
+
+
 
   
-    
+</div>
 
 
 
+  <div class="article-container">
+
+    <div class="article-style">
+      
 
 
+<div id="importing-bulk-rnaseq-files" class="section level1">
+<h1>Importing Bulk RNAseq files</h1>
+<p>The most common file types that we will see for bulk RNAseq are <strong>count matrix</strong> files ending in <code>.txt</code> or <code>.csv</code> or <code>.tsv</code> or <code>.xls</code>. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample. Note that usually the first row become the column name (aka header, noting each sample) and first column become the row name (noting each gene).</p>
+<pre class="r"><code># Read .txt file
+df1 &lt;- read.table(file = &quot;~/directory_of_your_file/your_file_name.txt&quot;,
+                  header = T, #set first row as header
+                  row.names = 1) #set first column
+# Read .tsv file
+df1 &lt;- read.delim(file = &quot;~/directory_of_your_file/your_file_name.txt&quot;,
+                  header = T, #set first row as header
+                  sep = &quot;\t&quot;, #for .tsv file
+                  row.names = 1) #set first column
 
+# Read .csv file
+df1 &lt;- read.delim(file = &quot;~/directory_of_your_file/your_file_name.txt&quot;,
+                  header = T, #set first row as header
+                  sep = &quot;,&quot;, #for .tsv file
+                  row.names = 1) #set first column
 
+# Read .xls file
+df1 &lt;- readxl::read_excel(path = &quot;~/directory_of_your_file/your_file_name.txt&quot;,
+                          col_names = T)
+#Actually I found Rstudio&#39;s &#39;Import Dataset&#39; UI is quite useful.</code></pre>
+</div>
+<div id="importing-scrnaseq-files-and-create-seurat-object" class="section level1">
+<h1>Importing scRNAseq files and create Seurat object</h1>
+<div id="type-1-filtered_feature_bc_matrix-files-from-standard-cellranger-output." class="section level2">
+<h2>Type 1: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices">filtered_feature_bc_matrix</a> files from standard <em>CellRanger</em> output.</h2>
+<p>For each sample sent for scRNAseq, the standard <em>CellRanger</em> pipeline will generate a <strong>filtered_feature_bc_matri</strong> file which contains 3 files:</p>
+<p><code>sample1_name_matrix.mtx(.gz)</code></p>
+<p><code>sample1_name_barcodes.tsv(.gz)</code></p>
+<p><code>sample1_name_genes.tsv(.gz)</code></p>
+<p>We will use the <code>ReadMtx()</code> function to load these 3 files into a dgCMatrix file, and then create a Seurat file from it.</p>
+<pre class="r"><code>library(Seurat)
+#Read into a dgCMatrix file
+sample1 &lt;- ReadMtx(
+  mtx=&quot;~/you_file_directory/sample1_name_matrix.mtx.gz&quot;,
+  cells = &quot;~/you_file_directory/sample1_name_barcodes.tsv.gz&quot;,
+  features = &quot;~/you_file_directory/sample1_name_genes.tsv.gz&quot;,
+  cell.column = 1,
+  feature.column = 2,
+  cell.sep = &quot;\t&quot;,
+  feature.sep = &quot;\t&quot;,
+  skip.cell = 0,
+  skip.feature = 0,
+  mtx.transpose = FALSE,
+  unique.features = TRUE,
+  strip.suffix = FALSE
+)
+#Create seurat object
+sample1 &lt;- CreateSeuratObject(counts = sample1)</code></pre>
+</div>
+<div id="type-2-an-.rds-or-.rdata-or-.robj-file" class="section level2">
+<h2>Type 2: An .RDS or .RData or .Robj file</h2>
+<p>Some very good paper with a large scRNAseq dataset typically provides the R object files to facilitate results reproduction. For example, this <a href="https://www.nature.com/articles/s41586-018-0590-4">paper</a> provided <code>.Robj</code> files <a href="https://figshare.com/articles/dataset/Robject_files_for_tissues_processed_by_Seurat/5821263/1">online</a> which really reduce our workload for re-analyze their data.</p>
+<p>In this case, we can simply download the <code>.Robj</code> files of interest and load into R by the Rstudio GUI.</p>
+</div>
+<div id="type-3-a-sample-feature-count-matrix-file" class="section level2">
+<h2>Type 3: A sample feature-count matrix file</h2>
+<p>The third most common file type is an <code>excel</code> or <code>.csv</code> or <code>.tsv</code> file that has first column as feature (gene) name and the rest column represents the expression level of each gene in each cell. In this case, the method is similar - use <code>read.table()</code> or similar functions to first read it and then use <code>CreateSeuratObject()</code> to create the Seurat object.</p>
+</div>
+</div>
 
-
-
-
-
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/category/%E6%95%99%E7%A8%8B/" >教程</a>
     </div>
 
     
 
-    <div class="stream-meta article-metadata">
 
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/rnaseq/">RNAseq</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
       
-
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://example.com/post/load_seq_files/loadfile/&amp;text=Loding%20different%20sequencing%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://example.com/post/load_seq_files/loadfile/&amp;t=Loding%20different%20sequencing%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
-    Dec 13, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-
-  
-  
-
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Loding%20different%20sequencing%20data%20into%20R&amp;body=https://example.com/post/load_seq_files/loadfile/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://example.com/post/load_seq_files/loadfile/&amp;title=Loding%20different%20sequencing%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Loding%20different%20sequencing%20data%20into%20R%20https://example.com/post/load_seq_files/loadfile/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://example.com/post/load_seq_files/loadfile/&amp;title=Loding%20different%20sequencing%20data%20into%20R" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
       
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu87216fdf28626632dafe09ae470981dd_59648_270x270_fill_q75_lanczos_center.JPG" alt="Lingxiao Wang, MBBS"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://example.com/">Lingxiao Wang, MBBS</a></h5>
+      <h6 class="card-subtitle">PhD Candidate in Neuroscience</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:wang.lingxiao@mayo.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/LingShyowWawng" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/LING-Shyow-Wawng" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://www.linkedin.com/in/lingxiao-wang-36167a241" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
+  </div>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-  
-
-  
-
-</div>
+</article>
   </div>
 
   <div class="page-footer">

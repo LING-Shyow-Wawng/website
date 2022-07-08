@@ -1,0 +1,83 @@
+---
+title: "Loding different sequencing data into R"
+author: "Lingxiao Wang"
+categories: ["R"]
+tags: ["RNAseq"]
+date: 2022-07-07
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Importing Bulk RNAseq files
+The most common file types that we will see for bulk RNAseq are **count matrix** files ending in `.txt` or `.csv` or `.tsv` or `.xls`. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample. Note that usually the first row become the column name (aka header, noting each sample) and first column become the row name (noting each gene).
+
+```{r, eval = FALSE}
+# Read .txt file
+df1 <- read.table(file = "~/directory_of_your_file/your_file_name.txt",
+                  header = T, #set first row as header
+                  row.names = 1) #set first column
+# Read .tsv file
+df1 <- read.delim(file = "~/directory_of_your_file/your_file_name.txt",
+                  header = T, #set first row as header
+                  sep = "\t", #for .tsv file
+                  row.names = 1) #set first column
+
+# Read .csv file
+df1 <- read.delim(file = "~/directory_of_your_file/your_file_name.txt",
+                  header = T, #set first row as header
+                  sep = ",", #for .tsv file
+                  row.names = 1) #set first column
+
+# Read .xls file
+df1 <- readxl::read_excel(path = "~/directory_of_your_file/your_file_name.txt",
+                          col_names = T)
+#Actually I found Rstudio's 'Import Dataset' UI is quite useful.
+```
+
+# Importing scRNAseq files and create Seurat object
+
+## Type 1: [filtered_feature_bc_matrix](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices) files from standard *CellRanger* output.
+
+For each sample sent for scRNAseq, the standard *CellRanger* pipeline will generate a **filtered_feature_bc_matri** file which contains 3 files:
+
+`sample1_name_matrix.mtx(.gz)`
+
+`sample1_name_barcodes.tsv(.gz)`
+
+`sample1_name_genes.tsv(.gz)`
+
+We will use the `ReadMtx()` function to load these 3 files into a dgCMatrix file, and then create a Seurat file from it.
+
+```{r, eval = FALSE}
+library(Seurat)
+#Read into a dgCMatrix file
+sample1 <- ReadMtx(
+  mtx="~/you_file_directory/sample1_name_matrix.mtx.gz",
+  cells = "~/you_file_directory/sample1_name_barcodes.tsv.gz",
+  features = "~/you_file_directory/sample1_name_genes.tsv.gz",
+  cell.column = 1,
+  feature.column = 2,
+  cell.sep = "\t",
+  feature.sep = "\t",
+  skip.cell = 0,
+  skip.feature = 0,
+  mtx.transpose = FALSE,
+  unique.features = TRUE,
+  strip.suffix = FALSE
+)
+#Create seurat object
+sample1 <- CreateSeuratObject(counts = sample1)
+
+```
+
+## Type 2: An .RDS or .RData or .Robj file
+Some very good paper with a large scRNAseq dataset typically provides the R object  files to facilitate results reproduction. For example, this [paper](https://www.nature.com/articles/s41586-018-0590-4) provided `.Robj` files [online](https://figshare.com/articles/dataset/Robject_files_for_tissues_processed_by_Seurat/5821263/1) which really reduce our workload for re-analyze their data.
+
+In this case, we can simply download the `.Robj` files of interest and load into R by the Rstudio GUI.
+
+## Type 3: A sample feature-count matrix file
+The third most common file type is an `excel` or `.csv` or `.tsv` file that has first column as feature (gene) name and the rest column represents the expression level of each gene in each cell. In this case, the method is similar - use `read.table()` or similar functions to first read it and then use `CreateSeuratObject()` to create the Seurat object.
