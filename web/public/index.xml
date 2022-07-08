@@ -40,8 +40,8 @@
       <description>
 
 
-&lt;div id=&#34;importing-bulk-rnaseq-files&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Importing Bulk RNAseq files&lt;/h1&gt;
+&lt;div id=&#34;importing-bulk-rnaseq-files&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Importing Bulk RNAseq files&lt;/h2&gt;
 &lt;p&gt;The most common file types that we will see for bulk RNAseq are &lt;strong&gt;count matrix&lt;/strong&gt; files ending in &lt;code&gt;.txt&lt;/code&gt; or &lt;code&gt;.csv&lt;/code&gt; or &lt;code&gt;.tsv&lt;/code&gt; or &lt;code&gt;.xls&lt;/code&gt;. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample. Note that usually the first row become the column name (aka header, noting each sample) and first column become the row name (noting each gene).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Read .txt file
 df1 &amp;lt;- read.table(file = &amp;quot;~/directory_of_your_file/your_file_name.txt&amp;quot;,
@@ -64,14 +64,14 @@ df1 &amp;lt;- readxl::read_excel(path = &amp;quot;~/directory_of_your_file/your_
                           col_names = T)
 #Actually I found Rstudio&amp;#39;s &amp;#39;Import Dataset&amp;#39; UI is quite useful.&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;importing-scrnaseq-files-and-create-seurat-object&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Importing scRNAseq files and create Seurat object&lt;/h1&gt;
-&lt;div id=&#34;type-1-filtered_feature_bc_matrix-files-from-standard-cellranger-output.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Type 1: &lt;a href=&#34;https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices&#34;&gt;filtered_feature_bc_matrix&lt;/a&gt; files from standard &lt;em&gt;CellRanger&lt;/em&gt; output.&lt;/h2&gt;
+&lt;div id=&#34;importing-scrnaseq-files-and-create-seurat-object&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Importing scRNAseq files and create Seurat object&lt;/h2&gt;
+&lt;div id=&#34;type-1-filtered_feature_bc_matrix-files-from-standard-cellranger-output.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type 1: &lt;a href=&#34;https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices&#34;&gt;filtered_feature_bc_matrix&lt;/a&gt; files from standard &lt;em&gt;CellRanger&lt;/em&gt; output.&lt;/h3&gt;
 &lt;p&gt;For each sample sent for scRNAseq, the standard &lt;em&gt;CellRanger&lt;/em&gt; pipeline will generate a &lt;strong&gt;filtered_feature_bc_matri&lt;/strong&gt; file which contains 3 files:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sample1_name_matrix.mtx(.gz)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sample1_name_barcodes.tsv(.gz)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sample1_name_genes.tsv(.gz)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sample1_name_matrix.mtx(.gz)&lt;/code&gt;
+&lt;code&gt;sample1_name_barcodes.tsv(.gz)&lt;/code&gt;
+&lt;code&gt;sample1_name_genes.tsv(.gz)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;We will use the &lt;code&gt;ReadMtx()&lt;/code&gt; function to load these 3 files into a dgCMatrix file, and then create a Seurat file from it.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Seurat)
 #Read into a dgCMatrix file
@@ -92,13 +92,13 @@ sample1 &amp;lt;- ReadMtx(
 #Create seurat object
 sample1 &amp;lt;- CreateSeuratObject(counts = sample1)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;type-2-an-.rds-or-.rdata-or-.robj-file&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Type 2: An .RDS or .RData or .Robj file&lt;/h2&gt;
+&lt;div id=&#34;type-2-an-.rds-or-.rdata-or-.robj-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type 2: An .RDS or .RData or .Robj file&lt;/h3&gt;
 &lt;p&gt;Some very good paper with a large scRNAseq dataset typically provides the R object files to facilitate results reproduction. For example, this &lt;a href=&#34;https://www.nature.com/articles/s41586-018-0590-4&#34;&gt;paper&lt;/a&gt; provided &lt;code&gt;.Robj&lt;/code&gt; files &lt;a href=&#34;https://figshare.com/articles/dataset/Robject_files_for_tissues_processed_by_Seurat/5821263/1&#34;&gt;online&lt;/a&gt; which really reduce our workload for re-analyze their data.&lt;/p&gt;
 &lt;p&gt;In this case, we can simply download the &lt;code&gt;.Robj&lt;/code&gt; files of interest and load into R by the Rstudio GUI.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;type-3-a-sample-feature-count-matrix-file&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Type 3: A sample feature-count matrix file&lt;/h2&gt;
+&lt;div id=&#34;type-3-a-sample-feature-count-matrix-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type 3: A sample feature-count matrix file&lt;/h3&gt;
 &lt;p&gt;The third most common file type is an &lt;code&gt;excel&lt;/code&gt; or &lt;code&gt;.csv&lt;/code&gt; or &lt;code&gt;.tsv&lt;/code&gt; file that has first column as feature (gene) name and the rest column represents the expression level of each gene in each cell. In this case, the method is similar - use &lt;code&gt;read.table()&lt;/code&gt; or similar functions to first read it and then use &lt;code&gt;CreateSeuratObject()&lt;/code&gt; to create the Seurat object.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

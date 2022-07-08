@@ -10,8 +10,8 @@ output: html_document
 
 
 
-<div id="importing-bulk-rnaseq-files" class="section level1">
-<h1>Importing Bulk RNAseq files</h1>
+<div id="importing-bulk-rnaseq-files" class="section level2">
+<h2>Importing Bulk RNAseq files</h2>
 <p>The most common file types that we will see for bulk RNAseq are <strong>count matrix</strong> files ending in <code>.txt</code> or <code>.csv</code> or <code>.tsv</code> or <code>.xls</code>. They will all look the same after importing into the R, with a structure that each row represents a feature (a gene) and each column represents a sample. Note that usually the first row become the column name (aka header, noting each sample) and first column become the row name (noting each gene).</p>
 <pre class="r"><code># Read .txt file
 df1 &lt;- read.table(file = &quot;~/directory_of_your_file/your_file_name.txt&quot;,
@@ -34,14 +34,14 @@ df1 &lt;- readxl::read_excel(path = &quot;~/directory_of_your_file/your_file_nam
                           col_names = T)
 #Actually I found Rstudio&#39;s &#39;Import Dataset&#39; UI is quite useful.</code></pre>
 </div>
-<div id="importing-scrnaseq-files-and-create-seurat-object" class="section level1">
-<h1>Importing scRNAseq files and create Seurat object</h1>
-<div id="type-1-filtered_feature_bc_matrix-files-from-standard-cellranger-output." class="section level2">
-<h2>Type 1: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices">filtered_feature_bc_matrix</a> files from standard <em>CellRanger</em> output.</h2>
+<div id="importing-scrnaseq-files-and-create-seurat-object" class="section level2">
+<h2>Importing scRNAseq files and create Seurat object</h2>
+<div id="type-1-filtered_feature_bc_matrix-files-from-standard-cellranger-output." class="section level3">
+<h3>Type 1: <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices">filtered_feature_bc_matrix</a> files from standard <em>CellRanger</em> output.</h3>
 <p>For each sample sent for scRNAseq, the standard <em>CellRanger</em> pipeline will generate a <strong>filtered_feature_bc_matri</strong> file which contains 3 files:</p>
-<p><code>sample1_name_matrix.mtx(.gz)</code></p>
-<p><code>sample1_name_barcodes.tsv(.gz)</code></p>
-<p><code>sample1_name_genes.tsv(.gz)</code></p>
+<p><code>sample1_name_matrix.mtx(.gz)</code>
+<code>sample1_name_barcodes.tsv(.gz)</code>
+<code>sample1_name_genes.tsv(.gz)</code></p>
 <p>We will use the <code>ReadMtx()</code> function to load these 3 files into a dgCMatrix file, and then create a Seurat file from it.</p>
 <pre class="r"><code>library(Seurat)
 #Read into a dgCMatrix file
@@ -62,13 +62,13 @@ sample1 &lt;- ReadMtx(
 #Create seurat object
 sample1 &lt;- CreateSeuratObject(counts = sample1)</code></pre>
 </div>
-<div id="type-2-an-.rds-or-.rdata-or-.robj-file" class="section level2">
-<h2>Type 2: An .RDS or .RData or .Robj file</h2>
+<div id="type-2-an-.rds-or-.rdata-or-.robj-file" class="section level3">
+<h3>Type 2: An .RDS or .RData or .Robj file</h3>
 <p>Some very good paper with a large scRNAseq dataset typically provides the R object files to facilitate results reproduction. For example, this <a href="https://www.nature.com/articles/s41586-018-0590-4">paper</a> provided <code>.Robj</code> files <a href="https://figshare.com/articles/dataset/Robject_files_for_tissues_processed_by_Seurat/5821263/1">online</a> which really reduce our workload for re-analyze their data.</p>
 <p>In this case, we can simply download the <code>.Robj</code> files of interest and load into R by the Rstudio GUI.</p>
 </div>
-<div id="type-3-a-sample-feature-count-matrix-file" class="section level2">
-<h2>Type 3: A sample feature-count matrix file</h2>
+<div id="type-3-a-sample-feature-count-matrix-file" class="section level3">
+<h3>Type 3: A sample feature-count matrix file</h3>
 <p>The third most common file type is an <code>excel</code> or <code>.csv</code> or <code>.tsv</code> file that has first column as feature (gene) name and the rest column represents the expression level of each gene in each cell. In this case, the method is similar - use <code>read.table()</code> or similar functions to first read it and then use <code>CreateSeuratObject()</code> to create the Seurat object.</p>
 </div>
 </div>
